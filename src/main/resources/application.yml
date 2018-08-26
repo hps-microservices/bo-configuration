@@ -1,0 +1,17 @@
+bo-configuration:
+  display-name: ${spring.application.name}
+
+info:
+  name: ${spring.application.name}
+
+server:
+  servlet:
+    application-display-name: ${spring.application.name}
+  port: 7800
+
+messages:
+  basename: messages
+  default:
+    country: BR
+    language: PT
+    encoding: UTF-8

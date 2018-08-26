@@ -1,0 +1,25 @@
+# Typically this file contains two properties:
+
+# -- location of the configuration server (spring.cloud.config.uri)
+# -- name of the application (spring.application.name)
+#
+# font: https://code.i-harness.com/en/q/1f77fe8
+
+spring:
+  application:
+    name: bo-configuration
+  cloud:
+    config:
+       server:
+          bootstrap: true
+          git:
+            uri: https://github.com/hps-microservices/bo-configuration-resources.git
+            default-label: prd
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://bo-eureka.herokuapp.com/eureka
+  instance:
+    appname: ${spring.application.name}
+
